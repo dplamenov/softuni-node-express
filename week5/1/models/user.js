@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
     validate: [
       {
         validator: (v) => {
-          return /[a-zA-Z0-9]+/.test(v);
+          return /^[a-zA-Z0-9]+$/.test(v);
         },
         message: props => `${props.value} is not a valid username!`
       }
@@ -24,7 +24,7 @@ const userSchema = new mongoose.Schema({
     validate: [
       {
         validator: (v) => {
-          return /[a-zA-Z0-9]+/.test(v);
+          return /^[a-zA-Z0-9]+$/.test(v);
         },
         message: props => `${props.value} is not a valid password!`
       }
